@@ -26,13 +26,17 @@ const items = [
 ];
 
 class App2 extends React.Component {
+    handlerClick=(name)=>(event)=>{
+        console.log(name); 
+        console.log(event.currentTarget);      
+    }
     render() {
       return (
         <ul className="item-list">
         {items
         .filter(item=>(item.price<10))
-        .map(item=>(
-             <li>
+        .map((item, index)=>(
+             <li key={index} onClick={this.handlerClick(item.name)}>
              <App2Item
                name={item.name}
                description={item.description}

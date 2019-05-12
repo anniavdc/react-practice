@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class App2Item extends React.Component {
     render() {
@@ -16,4 +17,11 @@ class App2Item extends React.Component {
     }
   }
 
+App2Item.protTypes={
+    quantity: PropTypes.number,
+    name: PropTypes.string,
+    description: PropTypes.string,
+    category: PropTypes.string,
+    price: PropTypes.number,
+}
 export default App2Item;
